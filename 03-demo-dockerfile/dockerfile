@@ -1,0 +1,9 @@
+FROM  python:3.9.18-slim
+WORKDIR  /app
+COPY   requirement.txt  .
+RUN   pip install  -r  requirement.txt
+COPY  . .
+CMD ["python", "appy.py"]
+EXPOSE 5000
+
+
